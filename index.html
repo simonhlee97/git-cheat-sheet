@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Git Playground</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				padding: 2em;
+			}
+			code {
+				font-family: Consolas, 'courier new';
+				color: crimson;
+				background-color: #f1f1f1;
+				padding: 2px;
+				font-size: 105%;
+			}
+			table {
+				font-family: Arial, Helvetica, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			td,
+			th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			th {
+				color: blue;
+			}
+
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			Super-Condensed Version Cheat-Sheet of
+			<a href="https://www.freecodecamp.org/news/git-cheat-sheet/" target="_blank"
+				>Fabio Pacific's great FreeCodeCamp post</a
+			>
+		</h1>
+
+		<table>
+			<tr>
+				<th>GIT COMMAND</th>
+				<th>DESCRIPTION</th>
+			</tr>
+
+			<tr>
+				<td><code>git config -l</code></td>
+				<td>check your git configuration</td>
+			</tr>
+
+			<tr>
+				<td><code>git config --global user.name "Fabio"</code></td>
+				<td>configure your git username</td>
+			</tr>
+
+			<tr>
+				<td><code>git config --global user.email "john@example.com"</code></td>
+				<td>setup your Git user email</td>
+			</tr>
+
+			<tr>
+				<td><code>git config --global credential.helper cache</code></td>
+				<td>cache your login credentials</td>
+			</tr>
+
+			<tr>
+				<td><code>git init</code></td>
+				<td>initialize a repo</td>
+			</tr>
+
+			<tr>
+				<td><code>git add filename_here</code></td>
+				<td>add an individual file to staging area</td>
+			</tr>
+
+			<tr>
+				<td><code>git add .</code></td>
+				<td>add all files to staging area</td>
+			</tr>
+
+			<tr>
+				<td><code>git add fil*</code></td>
+				<td>add all files starting with 'fil' to staging area</td>
+			</tr>
+
+			<tr>
+				<td><code>git status</code></td>
+				<td>show the status of the current repository</td>
+			</tr>
+
+			<tr>
+				<td><code>git commit</code></td>
+				<td>commit changes, and open editor to write a full commit message</td>
+			</tr>
+
+			<tr>
+				<td><code>git commit -m "your commit message here"</code></td>
+				<td>commit changes with a message</td>
+			</tr>
+
+			<tr>
+				<td><code>git commit -a -m "your commit message here"</code></td>
+				<td>commit changes (and skip the staging area)</td>
+			</tr>
+
+			<tr>
+				<td><code>git log</code></td>
+				<td>shows commit history for the current repo</td>
+			</tr>
+
+			<tr>
+				<td><code>git log -p</code></td>
+				<td>shows commit's history including all files and their changes</td>
+			</tr>
+
+			<tr>
+				<td><code>git show commit-id</code></td>
+				<td>see a specific commit</td>
+			</tr>
+
+			<tr>
+				<td><code>git log --stat</code></td>
+				<td>
+					shows stats about the changes in each commit, including line(s) changed and file
+					names
+				</td>
+			</tr>
+
+			<tr>
+				<td><code>git diff</code></td>
+				<td>see changes made before committing them using "diff"</td>
+			</tr>
+
+			<tr>
+				<td><code>git diff --staged</code></td>
+				<td>diff with the --staged flag to see any staged changes</td>
+			</tr>
+
+			<tr>
+				<td><code>git add -p</code></td>
+				<td>see changes using "git add -p"</td>
+			</tr>
+
+			<tr>
+				<td><code>git rm filename</code></td>
+				<td>remove tracked files from the current working tree</td>
+			</tr>
+
+			<tr>
+				<td><code>git mv oldfile newfile</code></td>
+				<td>This command stages the changes, then it expects a commit message</td>
+			</tr>
+
+			<tr>
+				<td><code>git checkout filename</code></td>
+				<td>revert unstaged changes</td>
+			</tr>
+
+			<tr>
+				<td>
+					<code>
+						git reset HEAD filename<br />
+						git reset HEAD -p
+					</code>
+				</td>
+				<td>revert staged changes</td>
+			</tr>
+
+			<tr>
+				<td><code>git commit --amend</code></td>
+				<td>modify and add changes to the most recent commit</td>
+			</tr>
+
+			<tr>
+				<td><code>git revert HEAD</code></td>
+				<td>revert the latest commit by using the head alias</td>
+			</tr>
+
+			<tr>
+				<td><code>git revert comit_id_here</code></td>
+				<td>rollback an old commit</td>
+			</tr>
+			<tr>
+				<td><code>git branch branch_name</code></td>
+				<td>create a new branch</td>
+			</tr>
+			<tr>
+				<td><code>git checkout branch_name</code></td>
+				<td>switch to a newly created branch</td>
+			</tr>
+			<tr>
+				<td><code>git branch</code></td>
+				<td>view list of branches</td>
+			</tr>
+
+			<tr>
+				<td><code>git checkout -b branch_name</code></td>
+				<td>create and switch to a new branch</td>
+			</tr>
+
+			<tr>
+				<td><code>git branch -d branch_name</code></td>
+				<td>delete a branch</td>
+			</tr>
+
+			<tr>
+				<td><code>git merge branch_name</code></td>
+				<td>merge two branches</td>
+			</tr>
+
+			<tr>
+				<td><code>git log --graph --oneline</code></td>
+				<td>show the commit log as a graph</td>
+			</tr>
+
+			<tr>
+				<td><code>git log --graph --oneline --all</code></td>
+				<td>show the commit log as a graph of all branches</td>
+			</tr>
+
+			<tr>
+				<td><code>git merge --abort</code></td>
+				<td>abort a conflicting merge (throw a merge away and start over)</td>
+			</tr>
+
+			<tr>
+				<td><code>git add remote https://repo_here</code></td>
+				<td>add a remote repository</td>
+			</tr>
+
+			<tr>
+				<td><code>git remote -v</code></td>
+				<td>see all remote repositories for your local repository</td>
+			</tr>
+
+			<tr>
+				<td><code>git remote show origin</code></td>
+				<td>get more info about a remote repo</td>
+			</tr>
+
+			<tr>
+				<td><code>git push</code></td>
+				<td>push changes to a remote repo</td>
+			</tr>
+
+			<tr>
+				<td><code>git pull</code></td>
+				<td>retrieve the latest changes made to the remote repository</td>
+			</tr>
+
+			<tr>
+				<td><code>git branch -r</code></td>
+				<td>shows the name of all remote branches that Git is tracking</td>
+			</tr>
+
+			<tr>
+				<td><code>git fetch</code></td>
+				<td>fetch remote repo changes</td>
+			</tr>
+
+			<tr>
+				<td><code>git log origin/main</code></td>
+				<td>check the current commits log of a remote repo</td>
+			</tr>
+
+			<tr>
+				<td><code>git merge origin/main</code></td>
+				<td>merge a remote repo with your local repo</td>
+			</tr>
+
+			<tr>
+				<td><code>git remote update</code></td>
+				<td>get the contents of remote branch w/o automatically merging</td>
+			</tr>
+
+			<tr>
+				<td><code>git push -u origin branch_name</code></td>
+				<td>push a new branch to a remote repo</td>
+			</tr>
+			<tr>
+				<td><code>git push --delete origin branch_name</code></td>
+				<td>remove a remote branch</td>
+			</tr>
+			<tr>
+				<td><code>git rebase branch_name</code></td>
+				<td>transfer completed work from one branch to another</td>
+			</tr>
+			<tr>
+				<td><code>git rebase -i master</code></td>
+				<td>run git rebase interactively using the -i flag</td>
+			</tr>
+			<tr>
+				<td><code>git push -f</code></td>
+				<td>force a push request</td>
+			</tr>
+		</table>
+	</body>
+</html>
