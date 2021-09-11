@@ -22,7 +22,7 @@ Because you are no longer at the most recent (Head) commit.
 #### How to delete data (or go back)
 
 -   working directory files
--   Unstaged changes
+-   undoing Unstaged changes
 -   staged changes
 -   deleting latest commit(s)
 -   deleting branches
