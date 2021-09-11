@@ -2,3 +2,12 @@ Let's commit this.
 
 This text was not committed. and will be deleted.
 
+
+
+new commands for Unstaged changes for tracked files:
+git restore .   
+git restore file-name
+
+(delete all untracked files and directories)
+First, run git clean -dn to list out the files you will delete....
+then git clean -df

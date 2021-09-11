@@ -1,0 +1,10 @@
+Undoing Staged Changes - 
+
+git reset filename
+(then git checkout filename)
+
+new command - git restore (go back and restore the version prior to this staged changes)
+
+
+
+

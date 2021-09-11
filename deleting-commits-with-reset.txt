@@ -1,0 +1,2 @@
+git reset helps to reset the head of our branch.
+(Undo commits)
