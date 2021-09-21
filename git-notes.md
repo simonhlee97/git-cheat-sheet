@@ -27,6 +27,18 @@ Because you are no longer at the most recent (Head) commit.
 -   deleting latest commit(s)
 -   deleting branches
 
-`git ls-files`
+`git ls-files` - an overview of all files in the staging area.
+
+Delete most recent commit and go back 1 commit:
+`git reset --soft HEAD~1`
+with a "soft" reset, you delete the commit, but stages are still in the working directory, in staging area.
+
+for removing changes from staging area (but not working directory):
+`git reset HEAD~1`
+
+`git reset --hard HEAD~1`
+remove changes from working directory, staging area
+
+`git branch -D branchname` to delete a branch
 
 **\*** Git Notes from Fireship's video **\***
