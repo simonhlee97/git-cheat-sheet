@@ -10,3 +10,8 @@ git diff
 to see current and incoming changes
 
 
+Merge vs Rebase vs Cherry-Pick
+
+Cherry-Pick
+add specific commit to branch (HEAD)
+it copies commit with new ID
